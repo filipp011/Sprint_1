@@ -5,7 +5,9 @@ class Tester:
         self.deadline = deadline
 
     def work_hard(self, deadline=True):
-        if self.deadline:
+        if deadline is None:
+            deadline = self.deadline
+        if deadline:
             print(self.name, 'Что ж, ещё часок поработаю!')
         else:
             print(self.name, 'Можно отдыхать')
